@@ -200,7 +200,7 @@
                     AuctionFlow
                 </div>
                 <div class="hidden md:flex gap-8">
-                    <a class="nav-link active" href="#hero">Projects</a>
+                    <a class="nav-link" href="#hero">Projects</a>
                     <a class="nav-link" href="#team">Team</a>
                     <a class="nav-link" href="#meetings">Meetings</a>
                 </div>
@@ -231,21 +231,6 @@
                         built with technical excellence and architectural
                         clarity in mind.
                     </p>
-                    <div class="flex flex-wrap gap-4 pt-2">
-                        <button
-                            class="bg-primary text-on-primary px-8 py-3.5 rounded-lg font-bold flex items-center gap-2 hover:opacity-95 active:scale-95 transform transition-transform shadow-sm"
-                        >
-                            View Demo
-                            <span class="material-symbols-outlined text-[18px]"
-                                >arrow_forward</span
-                            >
-                        </button>
-                        <button
-                            class="border-2 border-primary text-primary px-8 py-3.5 rounded-lg font-bold hover:bg-primary/5 transition-colors active:scale-95 transform transition-transform"
-                        >
-                            Technical Paper
-                        </button>
-                    </div>
                 </div>
                 <div class="relative">
                     <div
@@ -412,15 +397,6 @@
                             layers for buyer and seller protection.
                         </p>
                     </div>
-                    <a
-                        class="text-primary font-bold inline-flex items-center gap-2 mt-8 hover:opacity-80 transition-opacity"
-                        href="#"
-                    >
-                        View Security Audit
-                        <span class="material-symbols-outlined text-[18px]"
-                            >chevron_right</span
-                        >
-                    </a>
                 </div>
                 <div
                     class="bg-surface-container-low border border-outline-variant rounded-xl p-10 flex flex-col justify-between card-hover"
@@ -599,11 +575,6 @@
                                     >
                                         Status
                                     </th>
-                                    <th
-                                        class="px-6 py-4 text-xs font-bold tracking-widest uppercase text-on-surface-variant text-right"
-                                    >
-                                        Action
-                                    </th>
                                 </tr>
                             </thead>
                             <tbody
@@ -777,7 +748,7 @@
                 },
                 {
                     name: "Tiew Jie Nee",
-                    role: "UI/UX Designer, QA Testing",
+                    role: "QA Testing",
                     photo: "",
                 },
                 {
@@ -792,12 +763,12 @@
                 },
                 {
                     name: "Wesley Tan",
-                    role: "?????",
+                    role: "UI/UX Designer",
                     photo: "",
                 },
                 {
                     name: "Gavrel Saw",
-                    role: "?????",
+                    role: "UI/UX Designer",
                     photo: "",
                 },
             ];
@@ -830,24 +801,14 @@
             // =====================================================================
             const MEETING_DATA = [
                 {
-                    date: "2024-10-24",
-                    agenda: "Real-time engine optimization and WebSocket handshake logic.",
+                    date: "2026-04-01",
+                    agenda: "Determination of scope and allocation of work.",
                     status: "COMPLETE",
                 },
                 {
-                    date: "2024-11-02",
-                    agenda: "Payment gateway integration with Stripe and error handling.",
+                    date: "2026-04-18",
+                    agenda: "Review of functional requirements and non-functional requirements.",
                     status: "COMPLETE",
-                },
-                {
-                    date: "2024-11-10",
-                    agenda: "Frontend polishing and responsive grid implementation.",
-                    status: "IN REVIEW",
-                },
-                {
-                    date: "2024-11-18",
-                    agenda: "Performance testing results and final security audit review.",
-                    status: "SCHEDULED",
                 },
             ];
             // =====================================================================
@@ -908,11 +869,6 @@
                         <td class="px-6 py-4 text-sm font-medium text-on-surface whitespace-nowrap">${formatDate(m.date)}</td>
                         <td class="px-6 py-4 text-sm text-on-surface-variant max-w-xs">${escapeHtml(m.agenda)}</td>
                         <td class="px-6 py-4">${statusBadge(m.status)}</td>
-                        <td class="px-6 py-4 text-right">
-                          <button onclick="deleteMeeting(${i})" class="text-error hover:bg-error/10 p-2 rounded-lg transition-colors" title="Delete">
-                            <span class="material-symbols-outlined text-[20px]">delete</span>
-                          </button>
-                        </td>
                       </tr>`,
                     )
                     .join("");
