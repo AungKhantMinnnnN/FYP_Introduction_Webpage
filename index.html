@@ -573,6 +573,16 @@
                                     <th
                                         class="px-6 py-4 text-xs font-bold tracking-widest uppercase text-on-surface-variant"
                                     >
+                                        Duration
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold tracking-widest uppercase text-on-surface-variant"
+                                    >
+                                        Location
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold tracking-widest uppercase text-on-surface-variant"
+                                    >
                                         Status
                                     </th>
                                 </tr>
@@ -804,11 +814,22 @@
                     date: "2026-04-01",
                     agenda: "Determination of scope and allocation of work.",
                     status: "COMPLETE",
+                    duration: "1hr",
+                    location: "Teams",
                 },
                 {
                     date: "2026-04-18",
                     agenda: "Review of functional requirements and non-functional requirements.",
                     status: "COMPLETE",
+                    duration: "1hr30mins",
+                    location: "Teams",
+                },
+                {
+                    date: "2026-05-02",
+                    agenda: "Progress review for PRD document.",
+                    status: "COMPLETE",
+                    duration: "1hr",
+                    location: "Teams",
                 },
             ];
             // =====================================================================
@@ -868,6 +889,20 @@
                       <tr class="hover:bg-surface-container-lowest transition-colors">
                         <td class="px-6 py-4 text-sm font-medium text-on-surface whitespace-nowrap">${formatDate(m.date)}</td>
                         <td class="px-6 py-4 text-sm text-on-surface-variant max-w-xs">${escapeHtml(m.agenda)}</td>
+                        <td class="px-6 py-4 text-sm text-on-surface-variant">
+                          ${
+                              m.duration
+                                  ? `<span class="flex items-center gap-1 whitespace-nowrap"><span class="material-symbols-outlined text-[15px] text-outline flex-shrink-0">schedule</span>${escapeHtml(m.duration)}</span>`
+                                  : `<span class="text-outline-variant">—</span>`
+                          }
+                        </td>
+                        <td class="px-6 py-4 text-sm text-on-surface-variant whitespace-nowrap">
+                            ${
+                                m.location
+                                    ? `<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">location_on</span>${escapeHtml(m.location)}</span>`
+                                    : `<span class="text-outline-variant">—</span>`
+                            }
+                        </td>
                         <td class="px-6 py-4">${statusBadge(m.status)}</td>
                       </tr>`,
                     )
